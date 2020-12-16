@@ -4,9 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Carousel from './components/Carousel/Carousel';
+import Collapse from './components/Collapse/Collapse';
+import ActionLog from './components/ActionLog/ActionLog';
+
+const images = ['/logo192.png', '/logo512.png'];
+const text = 'collapse me';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App>
+      <ActionLog></ActionLog>
+      <Collapse text={text} opened={true} />;
+      <Carousel images={images} />,
+    </App>
   </React.StrictMode>,
   document.getElementById('root')
 );
